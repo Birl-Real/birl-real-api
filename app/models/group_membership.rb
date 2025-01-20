@@ -7,6 +7,5 @@ class GroupMembership < ApplicationRecord
   validates :user_id, uniqueness: { scope: :challenge_group_id }
 
   # Enums
-  ROLES = %w[admin member].freeze
-  validates :role, inclusion: { in: ROLES }
+  enum role: { member: 0, admin: 1 }
 end
