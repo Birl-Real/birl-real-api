@@ -1,0 +1,81 @@
+pt-BR:
+  # Traduções gerais
+  common:
+    actions:
+      edit: "Editar"
+      destroy: "Excluir"
+      show: "Visualizar"
+      back: "Voltar"
+      confirm: "Você tem certeza?"
+      new: "Novo"
+    messages:
+      created: "%{model} criado com sucesso."
+      updated: "%{model} atualizado com sucesso."
+      destroyed: "%{model} excluído com sucesso."
+
+  # Traduções para ActiveRecord
+  activerecord:
+    models:
+      user:
+        one: "Usuário"
+        other: "Usuários"
+      challenge_group:
+        one: "Grupo"
+        other: "Grupos"
+      group_membership:
+        one: "Membro do Grupo"
+        other: "Membros do Grupo"
+      post:
+        one: "Post"
+        other: "Posts"
+    
+    attributes:
+      user:
+        name: "Nome"
+        email: "E-mail"
+        password: "Senha"
+        password_confirmation: "Confirmação de senha"
+        current_password: "Senha atual"
+        remember_me: "Lembrar-me"
+        avatar: "Foto de perfil"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      challenge_group:
+        name: "Nome"
+        description: "Descrição"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        users: "Usuários"
+        posts: "Posts"
+      group_membership:
+        user: "Usuário"
+        group: "Grupo"
+        role: "Função"
+        roles:
+          admin: "Administrador"
+          member: "Membro"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      post:
+        title: "Título"
+        content: "Conteúdo"
+        user: "Autor"
+        group: "Grupo"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      
+    errors:
+      messages:
+        record_invalid: "Validação falhou: %{errors}"
+        restrict_dependent_destroy:
+          has_one: "Não é possível excluir o registro pois existe um %{record} dependente"
+          has_many: "Não é possível excluir o registro pois existem %{record} dependentes"
+      models:
+        group_membership:
+          attributes:
+            role:
+              inclusion: "deve ser 'admin' ou 'member'"
+        group:
+          attributes:
+            name:
+              blank: "não pode ficar em branco" 
